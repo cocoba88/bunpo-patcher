@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Build artifacts
+*.apk
+*-patched.apk
+*-aligned.apk
+*-signed.apk
+
+# Decompile output
+smali/
+smali_classes*/
+build/
+apktool.yml
+apktool.id
+
+# Tools (will be downloaded automatically)
+tools/*.jar
+tools/apktool.jar
+tools/uber-apk-signer.jar
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
