@@ -468,9 +468,9 @@ class SmaliPatcher:
 class BunpoPatcherLite:
     def __init__(self, apk_path):
         self.apk_path = Path(apk_path).resolve()
-        self.work_dir = Path(tempfile.mkdtemp(prefix='bunpo_patch_'))
+        self.work_dir = tempfile.mkdtemp(prefix='bunpo_patch_')
         self.output_apk = self.apk_path.parent / f"{self.apk_path.stem}_patched.apk"
-        self.smali_dir = self.work_dir / "smali_output"
+        self.smali_dir = Path(self.work_dir) / "smali_output"
         
     def cleanup(self):
         log_info("Cleaning up...")

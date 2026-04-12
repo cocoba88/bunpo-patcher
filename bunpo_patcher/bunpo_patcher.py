@@ -895,7 +895,7 @@ class BunpoPatcher:
         patch_count = patcher.apply_auto_patches(results)
         
         # Simpan report
-        report_path = self.work_dir / 'patch_report.json'
+        report_path = Path(self.work_dir) / 'patch_report.json'
         patcher.save_patch_report(report_path)
         
         # Print top targets untuk user
@@ -1028,7 +1028,7 @@ class BunpoPatcher:
             log_success("PATCHING SELESAI!")
             print("="*70)
             print(f"\\n📦 APK hasil patch: {self.output_apk}")
-            print(f"\\n📝 Patch report: {self.work_dir / 'patch_report.json'}")
+            print(f"\\n📝 Patch report: {Path(self.work_dir) / 'patch_report.json'}")
             print("\\n⚠️  CATATAN:")
             print("   - Install APK hasil patch pada device Android")
             print("   - Backup data sebelum install")
